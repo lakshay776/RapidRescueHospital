@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>RapidRescue</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="#" class="menu-item active" data-page="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="menu-item" data-page="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Location</span>
+            </a>
+            <a href="#" class="menu-item" data-page="status">
+                <i class="fas fa-ambulance"></i>
+                <span>Status</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page" id="dashboard-page">
+            <div class="page-title">
+                <h1>Emergency Dashboard</h1>
+                <div class="page-actions">
+                    <button class="btn" id="emergency-btn">
+                        <i class="fas fa-plus-circle"></i> Request Ambulance
+                    </button>
+                </div>
+            </div>
+
+            <div id="newPatient"><h2>New Patient</h2>
+                <div id="location">Location</div>
+                <div id="addninfo">
+                    <div id="number">Number of Patients</div>
+                    <div id="severity">severity</div>
+                    <div id="description">description</div>
+                    <div id="time">time of incident</div>
+                </div>
+            </div>
+
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Total Requests</h3>
+                    <div class="number">237</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Ambulances</h3>
+                    <div class="number">42</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Response Time</h3>
+                    <div class="number">6.8 <span style="font-size: 1rem;">mins</span></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Success Rate</h3>
+                    <div class="number">98.7<span style="font-size: 1rem;">%</span></div>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+ 
+</body>
+<script src="/socket.io/socket.io."></script>
+<script src="script.js"></script>
+</html>
